@@ -1111,3 +1111,7 @@ bobmods.lib.tech.remove_prerequisite("artillery", "radars-1")
 --фикс стрелок порта для сероводорода промывочных машин
 data.raw['assembling-machine']['washing-plant'].fluid_boxes[4].pipe_connections[1].type = "output"
 data.raw['assembling-machine']['washing-plant-2'].fluid_boxes[4].pipe_connections[1].type = "output"
+
+--фикс неправильного бойлера в ядерном реакторе	(AKMF https://discord.com/channels/569536773701500928/1181338288838160445/1197233194102169690)
+bobmods.lib.recipe.remove_ingredient("nuclear-reactor", "boiler-4")
+KaoExtended.recipe.addtorecipe("nuclear-reactor", {"boiler-3", 1})
